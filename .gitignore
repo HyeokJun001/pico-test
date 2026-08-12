@@ -1,0 +1,9 @@
+# 비밀번호가 들어간 실제 설정 (예제만 커밋)
+device/config.py
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
