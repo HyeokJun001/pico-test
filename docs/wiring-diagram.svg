@@ -1,0 +1,76 @@
+<svg viewBox="0 0 840 720" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <rect x="0" y="0" width="840" height="720" fill="#ffffff"/>
+  <text x="420" y="42" text-anchor="middle" font-size="26" font-weight="700" fill="#1a1a2e">DHT11 센서 ↔ 라즈베리파이 피코 W 배선</text>
+  <text x="420" y="70" text-anchor="middle" font-size="15" fill="#6b7280">점퍼선(암-암) 3가닥만 꽂으면 됩니다 · 납땜 없음</text>
+
+  <!-- ===== DHT11 모듈 ===== -->
+  <text x="165" y="185" text-anchor="middle" font-size="16" font-weight="700" fill="#1565c0">DHT11 센서 모듈</text>
+  <rect x="95" y="200" width="150" height="170" rx="12" fill="#1e88e5" stroke="#0d47a1" stroke-width="2"/>
+  <circle cx="140" cy="235" r="14" fill="#e3f2fd" stroke="#0d47a1" stroke-width="1.5"/>
+  <text x="140" y="205" text-anchor="middle" font-size="12" fill="#e3f2fd">센서(파란 격자)</text>
+  <!-- DHT11 pins -->
+  <g font-size="15" font-weight="700">
+    <circle cx="245" cy="245" r="7" fill="#ffcdd2" stroke="#b71c1c" stroke-width="2"/>
+    <text x="150" y="250" fill="#fff">＋ (VCC)</text>
+    <circle cx="245" cy="285" r="7" fill="#fff9c4" stroke="#f9a825" stroke-width="2"/>
+    <text x="150" y="290" fill="#fff">S (DATA)</text>
+    <circle cx="245" cy="325" r="7" fill="#cfd8dc" stroke="#263238" stroke-width="2"/>
+    <text x="150" y="330" fill="#fff">－ (GND)</text>
+  </g>
+
+  <!-- ===== Raspberry Pi Pico W ===== -->
+  <rect x="605" y="85" width="34" height="16" rx="3" fill="#9e9e9e"/>
+  <text x="622" y="80" text-anchor="middle" font-size="12" fill="#6b7280">USB ↑</text>
+  <rect x="560" y="100" width="122" height="480" rx="14" fill="#2e7d32" stroke="#1b5e20" stroke-width="2"/>
+  <text x="621" y="130" text-anchor="middle" font-size="13" font-weight="700" fill="#c8e6c9">Pico W</text>
+  <!-- pin columns (physical numbers): left 1..20 top→bottom, right 40..21 top→bottom -->
+  <!-- left column x=583, right column x=659; 20 pins each, y 150..560 -->
+  <g fill="#ffd54f" stroke="#8d6e00" stroke-width="1">
+    <!-- generate visually: draw all 40 as small circles -->
+    <!-- left -->
+    <circle cx="583" cy="150" r="4.5"/><circle cx="583" cy="171.6" r="4.5"/><circle cx="583" cy="193.2" r="4.5"/><circle cx="583" cy="214.7" r="4.5"/><circle cx="583" cy="236.3" r="4.5"/><circle cx="583" cy="257.9" r="4.5"/><circle cx="583" cy="279.5" r="4.5"/><circle cx="583" cy="301.1" r="4.5"/><circle cx="583" cy="322.6" r="4.5"/><circle cx="583" cy="344.2" r="4.5"/><circle cx="583" cy="365.8" r="4.5"/><circle cx="583" cy="387.4" r="4.5"/><circle cx="583" cy="409" r="4.5"/><circle cx="583" cy="430.5" r="4.5"/><circle cx="583" cy="452.1" r="4.5"/><circle cx="583" cy="473.7" r="4.5"/><circle cx="583" cy="495.3" r="4.5"/><circle cx="583" cy="516.8" r="4.5"/><circle cx="583" cy="538.4" r="4.5"/>
+    <!-- right -->
+    <circle cx="659" cy="150" r="4.5"/><circle cx="659" cy="171.6" r="4.5"/><circle cx="659" cy="193.2" r="4.5"/><circle cx="659" cy="214.7" r="4.5"/><circle cx="659" cy="236.3" r="4.5"/><circle cx="659" cy="257.9" r="4.5"/><circle cx="659" cy="279.5" r="4.5"/><circle cx="659" cy="301.1" r="4.5"/><circle cx="659" cy="322.6" r="4.5"/><circle cx="659" cy="344.2" r="4.5"/><circle cx="659" cy="365.8" r="4.5"/><circle cx="659" cy="387.4" r="4.5"/><circle cx="659" cy="409" r="4.5"/><circle cx="659" cy="430.5" r="4.5"/><circle cx="659" cy="452.1" r="4.5"/><circle cx="659" cy="473.7" r="4.5"/><circle cx="659" cy="495.3" r="4.5"/><circle cx="659" cy="516.8" r="4.5"/><circle cx="659" cy="538.4" r="4.5"/>
+  </g>
+  <!-- bottom pins (20 left, 21 right) row -->
+  <circle cx="583" cy="560" r="4.5" fill="#ffd54f" stroke="#8d6e00"/>
+  <circle cx="659" cy="560" r="4.5" fill="#ffd54f" stroke="#8d6e00"/>
+
+  <!-- pin 1 marker -->
+  <rect x="577" y="144" width="12" height="12" fill="none" stroke="#e53935" stroke-width="2"/>
+  <text x="560" y="140" text-anchor="end" font-size="11" fill="#e53935">1번핀</text>
+
+  <!-- highlighted target pins: GP15=phys20 (left bottom, y=560), 3V3=phys36 (right, y=193.2), GND=phys38 (right, y=150) -->
+  <circle cx="583" cy="560" r="9" fill="none" stroke="#f9a825" stroke-width="3"/>
+  <circle cx="659" cy="193.2" r="9" fill="none" stroke="#b71c1c" stroke-width="3"/>
+  <circle cx="659" cy="150" r="9" fill="none" stroke="#263238" stroke-width="3"/>
+
+  <!-- pin labels -->
+  <text x="674" y="150" font-size="14" font-weight="700" fill="#263238">GND · 38번</text>
+  <text x="674" y="197" font-size="14" font-weight="700" fill="#b71c1c">3V3 · 36번</text>
+  <text x="573" y="583" text-anchor="middle" font-size="14" font-weight="700" fill="#f9a825">GP15 · 20번</text>
+
+  <!-- ===== wires ===== -->
+  <!-- red: VCC -> 3V3(36) -->
+  <path d="M245,245 C430,120 620,120 659,193" fill="none" stroke="#e53935" stroke-width="5" stroke-linecap="round"/>
+  <!-- black: GND -> GND(38) -->
+  <path d="M245,325 C470,70 640,70 659,150" fill="none" stroke="#263238" stroke-width="5" stroke-linecap="round"/>
+  <!-- yellow: DATA -> GP15(20) -->
+  <path d="M245,285 C400,470 480,560 583,560" fill="none" stroke="#f9a825" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- ===== legend ===== -->
+  <rect x="95" y="410" width="360" height="175" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="115" y="440" font-size="16" font-weight="700" fill="#1a1a2e">연결 요약</text>
+  <g font-size="14.5">
+    <rect x="115" y="455" width="26" height="10" rx="3" fill="#e53935"/>
+    <text x="152" y="465" fill="#334155"><tspan font-weight="700">＋ VCC</tspan>  →  피코 <tspan font-weight="700">3V3</tspan> (36번 핀)</text>
+    <rect x="115" y="490" width="26" height="10" rx="3" fill="#f9a825"/>
+    <text x="152" y="500" fill="#334155"><tspan font-weight="700">S DATA</tspan>  →  피코 <tspan font-weight="700">GP15</tspan> (20번 핀)</text>
+    <rect x="115" y="525" width="26" height="10" rx="3" fill="#263238"/>
+    <text x="152" y="535" fill="#334155"><tspan font-weight="700">－ GND</tspan>  →  피코 <tspan font-weight="700">GND</tspan> (38번 핀)</text>
+  </g>
+  <text x="115" y="567" font-size="12.5" fill="#dc2626">※ DHT11 핀 순서는 제품마다 달라요 — 보드에 적힌 글자로 맞추세요.</text>
+
+  <!-- orientation note -->
+  <text x="420" y="640" text-anchor="middle" font-size="13" fill="#6b7280">피코를 USB가 위로 오게 두면: 왼쪽 맨 위가 1번 핀. 오른쪽 위에서 3번째=GND(38), 5번째=3V3(36), 왼쪽 맨 아래=GP15(20)</text>
+</svg>
